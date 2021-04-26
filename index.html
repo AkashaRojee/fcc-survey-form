@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <link href="styles.css" rel="stylesheet">
+    <title>Survey Form</title>
+</head>
+<body>
+
+    <header>
+
+        <h1 id="title">Survey Form</h1>
+        <p id="description">Thank you for your feedback!</p>
+
+    </header>
+
+    <main>
+
+        <form id="survey-form">
+
+            <section class="form-row">
+                <label class="form-label" for="name" id="name-label">Name</label>
+                <input class="form-input text-container" id="name" type="text" placeholder="Enter name" required>
+            </section>
+
+            <section class="form-row">
+                <label class="form-label" for="email" id="email-label">E-mail address</label>
+                <input class="form-input text-container" id="email" type="email"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                    placeholder="Enter e-mail address" required>
+            </section>
+                
+            <section class="form-row">
+                <label class="form-label" for="age" id="number-label">Age</label>
+                <input class="form-input text-container" id="number" type="number" min="18" max="100" placeholder="Enter age">
+            </section>
+
+            <section class="form-row">
+                <label class="form-label" for="dropdown">Choose a schedule</label>
+                <select class="form-input text-container" id="dropdown" required>
+                    <option value="" disabled selected>--Please choose a schedule--</option>
+                    <option value="fulltime">Full-time</option>
+                    <option value="parttime">Part-time</option>
+                    <option value="flexitime">Flexi-time</option>
+                </select>
+            </section>
+
+            <section class="form-row">
+                <div class="form-label">Which module did you prefer?</div>
+                <div class="form-input">
+                    <div>
+                        <input type="radio" name="module" id="html" value="html" required>
+                        <label for="html">HTML</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="module" id="css" value="css">
+                        <label for="css">CSS</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="module" id="js" value="js">
+                        <label for="js">JS</label>
+                    </div>
+                </div>
+            </section>
+
+            <section class="form-row">
+                <div class="form-label">Would you recommend us?</div>
+                <div class="form-input">
+                    <div>
+                        <input type="radio" name="recommendation" id="yes" value="yes" required>
+                        <label for="yes">Yes</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="recommendation" id="no" value="no">
+                        <label for="no">No</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="recommendation" id="maybe" value="maybe">
+                        <label for="maybe">Maybe</label>
+                    </div>
+                </div>
+            </section>
+
+            <section class="form-row">
+                <div class="form-label">What would you like to see next?</div>
+                <div class="form-input">
+                    <div>
+                        <input type="checkbox" id="bootstrap" value="bootstrap">
+                        <label for="bootstrap">Bootstrap</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="angular" value="angular">
+                        <label for="angular">Angular</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="php" value="php">
+                        <label for="php">PHP</label>
+                    </div>
+                </div>
+            </section>
+
+            <section class="form-row">
+                <label class="form-label" for id="comments">Comments</label>
+                <textarea class="form-input text-container" id="comments" placeholder="Enter comments"></textarea>
+            </section>
+
+            <section class="form-button">
+                <button id="submit">Submit</button>
+            </section>
+
+        </form>
+
+    </main>
+
+    <footer>
+        <div>Made by <a href="https://github.com/AkashaRojee" target="_blank">Akasha Rojee</a></div>
+    </footer>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
